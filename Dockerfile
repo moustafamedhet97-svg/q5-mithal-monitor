@@ -8,7 +8,6 @@ RUN pip install --no-cache-dir \
     --prefix=/install \
     -r requirements.txt
 
-
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -19,4 +18,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh","-c","python3 monitor.py & python3 -m http.server 8000"]
+CMD ["python3", "-m", "http.server", "8000", "--directory", "/app"]
