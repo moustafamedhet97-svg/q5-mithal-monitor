@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mithal Monitoring Dashboard</title>
+
+    <link rel="stylesheet" href="style.css?v=3">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Mithal Monitoring Dashboard</h1>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Uptime (24h)</h3>
+
+            <h2 id="uptime">0%</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>SSL Status</h3>
+
+            <h2 id="ssl">Loading...</h2>
+
+        </div>
+
+    </div>
+
+    <div class="chart-container">
+
+        <canvas id="latencyChart"></canvas>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Last 10 Checks</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Latency</th>
+                    <th>DNS</th>
+                    <th>Search</th>
+                    <th>SSL Days</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="history">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="app.js?v=3"></script>
+
+</body>
+
